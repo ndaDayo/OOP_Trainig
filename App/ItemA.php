@@ -4,32 +4,27 @@ declare(strict_types=1);
 
 namespace App;
 
+use App\ValueObject\Money;
+
 class ItemA
 {
     /**
-     * @param $money
+     * @param int $money
      * @return string
      */
     public function showAmount(int $money): string
     {
-        return $money . '円';
+        $money = new Money($money);
+        return $money->getValue() . '円';
     }
 
     /**
-     * @param $money
+     * @param int $money
      * @return string
      */
     public function showAmountWithTax(int $money): string
     {
-        return $money * 1.08 . '円';
-    }
-
-    /**
-     * @param $money
-     * @return string
-     */
-    public function showAmountWithShippingFee(int $money): string
-    {
-        return $money * 1.08 . +1000 . '円(送料込)';
+        $money = new Money($money);
+        return $money->getTaxValue() . '円';
     }
 }
