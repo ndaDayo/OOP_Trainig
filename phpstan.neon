@@ -3,6 +3,6 @@ includes:
 parameters:
   level: max
   paths:
-    - app
+    - src
   ignoreErrors:
     - '#Method [a-zA-Z0-9\\_\(\)\:]+ has no return typehint specified\.#'

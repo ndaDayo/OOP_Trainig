@@ -11,12 +11,7 @@
   <arg value="nps"/>
 
   <!-- Directories to be checked -->
-  <file>app</file>
-  <file>tests</file>
-
-  <exclude-pattern>/app/Http/Kernel.php</exclude-pattern>
-  <exclude-pattern>/app/Console/Kernel.php</exclude-pattern>
-
+  <file>src</file>
   <!-- Doctrine Coding Standard (Based on PSR-12) -->
   <rule ref="Doctrine">
     <!-- Exclude rules -->
